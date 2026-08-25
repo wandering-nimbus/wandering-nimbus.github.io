@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>[wandering-nimbus] - Developer Portfolio</title>
+        
+        <link rel="stylesheet" href="style.css">
+
+        <!--Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+        
+        <!--Font Awesome Icons-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        
+        <!--Dev Icons-->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"/>
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <h1>[wandering-nimbus]</h1>
+                <ul>
+                    <li>
+                        <a href="#about">
+                            <i class="fa-solid fa-user"></i> About
+                        </a>
+                    </li>
+                    |
+                    <li>
+                        <a href="#projects">
+                            <i class="fa-solid fa-briefcase"></i>
+                            Projects
+                        </a>
+                    </li>
+                    |
+                    <li>
+                        <a href="#contact">
+                            <i class="fa-solid fa-envelope"></i>
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="about">
+                <h2>Hi, I'm wandering-nimbus 👋</h2>
+                <p>I'm a software developer with experience in various programming languages and frameworks. 
+                    I have an interest in full stack development, and 
+                    I spend my time building everything and anything I think is useful, especially to me.
+                    I value clean architecture and 
+                    I'm always looking to learn something new and improve my skills. 
+                </p>
+
+                <!--*Skills-->
+                <h3 class="skills-title">Skills</h3>
+                <div class="skills">
+                    <div class="skills-item">
+                        <i class="devicon-cplusplus-plain colored"></i>
+                        <span>C++</span>
+                    </div>
+
+                    <div class="skills-item">
+                        <i class="devicon-qt-plain colored"></i>
+                        <span>Qt</span>
+                    </div>
+
+                    <div class="skills-item">
+                        <i class="devicon-flutter-plain colored"></i>
+                        <span>Flutter</span>
+                    </div>
+
+                    <div class="skills-item">
+                        <i class="devicon-dart-plain colored"></i>
+                        <span>Dart</span>
+                    </div>
+                    
+
+                </div>
+            </section>
+
+            <section id="projects">
+                <h2>Projects</h2>
+                <div class="project-grid">
+                    
+                    <!-- *Project 1: the watchlist-->
+                     <div class="card">
+                        <div class="carousel-container">
+                            <img src="assets/the-watchlist/watchlistHome.png" alt="Screenshot of the watchlist app" class="project-media carousel-image">
+                            <img src="assets/the-watchlist/movie-details.png" alt="Screenshot of the movie undertone in the app" class="project-media carousel-image">
+                            <img src="assets/the-watchlist/my-watchlist.png" alt="Screenshot of a user's watchlist" class="project-media carousel-image">
+                            <img src="assets/the-watchlist/settings.png" alt="Screenshot of the settings screen in the app" class="project-media carousel-image">
+                        </div>
+                        
+                        <h3>the watchlist</h3>
+                        <p>A mobile movie tracking application featuring a modern Material 3 UI.
+                            Built using Flutter and Dart, with local data persistance powered by a Hive NoSQL database.
+                            Dynamic media data is fetched via the TMDB API.
+                        </p>
+
+                        <br/>
+                        <i class="devicon-dart-plain colored" style="font-size: 30px;"></i>
+                        <i class="devicon-flutter-plain colored" style="font-size: 30px;"></i>
+                        <br/>
+                        
+                     </div>
+
+                     <!--*Project 2: Unity project-->
+                     <div class="card">
+                        <video autoplay loop muted playsinline class="project-media">
+                            <source src="assets/futuristic-city/exploration.mp4" type="video/mp4">
+                        </video>
+
+                        <h3>Futuristic City</h3>
+                        <p>A 3D interactive scene developed in Unity3D.
+                            This project features a futuristic city with camera controls that allow 
+                            users to explore the 3D environment.
+                        </p>
+
+                        <br/>
+                        <i class="devicon-csharp-plain colored" style="font-size: 30px;"></i>
+                        <i class="devicon-unity-plain colored" style="font-size: 30px;"></i>
+                        <br/>
+
+                        <div class="project-tags">
+                            <span>Learning Project</span>
+                        </div>
+
+                        <a href="https://github.com/[wandering-nimbus]/futuristic-city" target="_blank">
+                            <i class="fa-brands fa-github"></i> View Code
+                        </a>
+                    </div>
+
+                     <!--*P3: Qt project-->
+                     <div class="card">
+                        <h3>Cargo Tracker</h3>
+                        <p>A desktop application utilising a client-server architecture to track cargo.
+                            Developed with Qt 6 and C++.
+                        </p>
+
+                        <br/>
+                        <i class="devicon-cplusplus-plain colored" style="font-size: 30px;"></i>
+                        <i class="devicon-qt-plain colored" style="font-size: 30px;"></i>
+                        <br/>
+
+                        <div class="project-tags">
+                            <span>Learning Project</span>
+                        </div>
+
+                        <a href="https://github.com/[wandering-nimbus]/cargo-tracker" target="_blank">
+                            <i class="fa-brands fa-github"></i> View Code
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer id="contact">
+            <h2 style="color: white;">Let's Connect</h2>
+            <p class="social-links"> 
+                <a href="https://github.com/wandering-nimbus" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                    GitHub
+                </a> | 
+                <!--!Add LinkedIn-->
+                <a href="https://linkedin.com/in/..." target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                    LinkedIn
+                </a> 
+            </p>
+        </footer>
+    </body>
+</html>
