@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>[wandering-nimbus] - Developer Portfolio</title>
+        <title>wandering-nimbus - Developer Portfolio</title>
         
         <link rel="stylesheet" href="style.css">
 
@@ -59,7 +59,7 @@
                 </p>
 
                 <!--*Skills-->
-                <h3 class="skills-title">Skills</h3>
+                <h2 class="skills-title">Skills</h2>
                 <div class="skills">
                     <div class="skills-item">
                         <i class="devicon-cplusplus-plain colored"></i>
@@ -80,8 +80,11 @@
                         <i class="devicon-dart-plain colored"></i>
                         <span>Dart</span>
                     </div>
-                    
 
+                    <div class="skills-item">
+                        <i class="devicon-html5-plain colored"></i>
+                        <span>HTML5</span>
+                    </div>
                 </div>
             </section>
 
@@ -92,7 +95,8 @@
                     <!-- *Project 1: the watchlist-->
                      <div class="card">
                         <div class="carousel-container">
-                            <img src="assets/the-watchlist/watchlistHome.png" alt="Screenshot of the watchlist app" class="project-media carousel-image">
+                            <img src="assets/the-watchlist/home-screen.png" alt="Screenshot of the home screen" class="project-media carousel-image">
+                            <img src="assets/the-watchlist/upcoming.png" alt="Screenshot of the upcoming screen" class="project-media carousel-image">
                             <img src="assets/the-watchlist/movie-details.png" alt="Screenshot of the movie undertone in the app" class="project-media carousel-image">
                             <img src="assets/the-watchlist/my-watchlist.png" alt="Screenshot of a user's watchlist" class="project-media carousel-image">
                             <img src="assets/the-watchlist/settings.png" alt="Screenshot of the settings screen in the app" class="project-media carousel-image">
@@ -104,11 +108,10 @@
                             Dynamic media data is fetched via the TMDB API.
                         </p>
 
-                        <br/>
-                        <i class="devicon-dart-plain colored" style="font-size: 30px;"></i>
-                        <i class="devicon-flutter-plain colored" style="font-size: 30px;"></i>
-                        <br/>
-                        
+                        <span style="padding-top: 10px;">
+                            <i class="devicon-dart-plain colored" style="font-size: 30px;"></i>
+                            <i class="devicon-flutter-plain colored" style="font-size: 30px;"></i>
+                        </span>
                      </div>
 
                      <!--*Project 2: Unity project-->
@@ -123,14 +126,14 @@
                             users to explore the 3D environment.
                         </p>
 
-                        <br/>
-                        <i class="devicon-csharp-plain colored" style="font-size: 30px;"></i>
-                        <i class="devicon-unity-plain colored" style="font-size: 30px;"></i>
-                        <br/>
-
                         <div class="project-tags">
                             <span>Learning Project</span>
                         </div>
+
+                        <span style="padding-top: 10px;">
+                            <i class="devicon-csharp-plain colored" style="font-size: 30px;"></i>
+                            <i class="devicon-unity-plain colored" style="font-size: 30px;"></i>
+                        </span>
 
                         <a href="https://github.com/wandering-nimbus/futuristic-city" target="_blank">
                             <i class="fa-brands fa-github"></i> View Code
@@ -144,14 +147,14 @@
                             Developed with Qt 6 and C++.
                         </p>
 
-                        <br/>
-                        <i class="devicon-cplusplus-plain colored" style="font-size: 30px;"></i>
-                        <i class="devicon-qt-plain colored" style="font-size: 30px;"></i>
-                        <br/>
-
                         <div class="project-tags">
                             <span>Learning Project</span>
                         </div>
+                        
+                        <span style="padding-top: 10px;">
+                            <i class="devicon-cplusplus-plain colored" style="font-size: 30px;"></i>
+                            <i class="devicon-qt-plain colored" style="font-size: 30px;"></i>
+                        </span>
 
                         <a href="https://github.com/wandering-nimbus/cargo-tracker" target="_blank">
                             <i class="fa-brands fa-github"></i> View Code
@@ -167,13 +170,48 @@
                 <a href="https://github.com/wandering-nimbus" target="_blank">
                     <i class="fa-brands fa-github"></i>
                     GitHub
-                </a> | 
-                <!--!Add LinkedIn-->
+                </a> 
+                <!-- | 
+                 !Add LinkedIn
                 <a href="https://linkedin.com/in/..." target="_blank">
                     <i class="fa-brands fa-linkedin"></i>
                     LinkedIn
                 </a> 
+            -->
             </p>
         </footer>
+
+        <div id="imageModal" class="modal">
+            <span class="close-modal">&times;</span>
+            <img class="modal-content" id="expandedImage">
+        </div>
+
+        <script>
+            const modal = document.getElementById("imageModal");
+            const expandedImage = document.getElementById("expandedImage");
+            const closeModalButton = document.getElementsByClassName("close-modal")[0];
+
+            //get images
+            const images = document.querySelectorAll(".carousel-image");
+
+            images.forEach(img => {
+                img.addEventListener("click", function() {
+                    modal.style.display = "block";
+                    expandedImage.src = this.src;
+                });
+            });
+
+            //close image by pressing "X" btn
+            closeModalButton.addEventListener("click", function() {
+                modal.style.display = "none";
+            });
+
+            //close image when clicking anywhere on the screen besides the "X" btn
+            window.addEventListener("click", function(event) {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
+        </script>
     </body>
 </html>
