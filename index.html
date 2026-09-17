@@ -91,10 +91,10 @@
             <section id="projects">
                 <h2>Projects</h2>
                 <div class="project-grid">
-                    
-                    
                     <!-- *Project 1: the watchlist-->
                      <div class="card">
+                        <h3>the watchlist</h3>
+
                         <div class="carousel-container">
                             <img src="assets/the-watchlist/home-screen.png" alt="Screenshot of the home screen" class="project-media carousel-image">
                             <img src="assets/the-watchlist/upcoming.png" alt="Screenshot of the upcoming screen" class="project-media carousel-image">
@@ -103,25 +103,26 @@
                             <img src="assets/the-watchlist/settings.png" alt="Screenshot of the settings screen in the app" class="project-media carousel-image">
                         </div>
                         
-                        <h3>the watchlist</h3>
                         <p>A mobile movie tracking application featuring a modern Material 3 UI.
                             Built using Flutter and Dart, with local data persistance powered by a Hive NoSQL database.
                             Dynamic media data is fetched via the TMDB API.
                         </p>
-
+                        
                         <span style="padding-top: 10px;">
                             <i class="devicon-dart-plain colored" style="font-size: 30px;"></i>
                             <i class="devicon-flutter-plain colored" style="font-size: 30px;"></i>
                         </span>
+
+                        <span  style="font-size:small; margin: 5px; color: var(--red);">*Code Available Upon Request</span>
                      </div>
 
                      <!--*Project 2: Unity project-->
                      <div class="card">
+                        <h3>Futuristic City</h3>
                         <video autoplay loop muted playsinline class="project-media">
                             <source src="assets/futuristic-city/exploration.mp4" type="video/mp4">
                         </video>
-
-                        <h3>Futuristic City</h3>
+                        
                         <p>A 3D interactive scene developed in Unity3D.
                             This project features a futuristic city with camera controls that allow 
                             users to explore the 3D environment.
@@ -144,6 +145,13 @@
                      <!--*P3: Qt project-->
                      <div class="card">
                         <h3>Cargo Tracker</h3>
+
+                        <div class="carousel-container">
+                            <img src="assets/cargo-tracker/client.png" alt="Screenshot of the client application" class="project-media desktop-carousel-image">
+                            <img src="assets/cargo-tracker/client-post-to-xml.png" alt="Screenshot of the 'Post to XML' tab in the client application" class="project-media desktop-carousel-image">
+                            <img src="assets/cargo-tracker/server.png" alt="Screenshot of the server application" class="project-media desktop-carousel-image">
+                        </div>
+
                         <p>A desktop application utilising a client-server architecture to track cargo.
                             Developed with Qt 6 and C++.
                         </p>
@@ -182,6 +190,7 @@
             </p>
         </footer>
 
+        <!--For expanded images-->
         <div id="imageModal" class="modal">
             <span class="close-modal">&times;</span>
             <img class="modal-content" id="expandedImage">
@@ -193,7 +202,7 @@
             const closeModalButton = document.getElementsByClassName("close-modal")[0];
 
             //get images
-            const images = document.querySelectorAll(".carousel-image");
+            const images = document.querySelectorAll(".carousel-image, .desktop-carousel-image");
 
             images.forEach(img => {
                 img.addEventListener("click", function() {
